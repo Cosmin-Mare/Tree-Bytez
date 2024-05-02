@@ -1,113 +1,301 @@
+"use client";
 import Image from "next/image";
-
+import { useRef, useState } from "react";
+import { useEffect } from "react";
+import Accordion from "@/components/accordion";
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
+  const sealRef = useRef(null);
+  const envelopeTriangleRef = useRef(null);
+  const invitationRef = useRef(null);
+  const envelopeRef = useRef(null);
+  const [accordions, setAccordion] = useState([
+    {
+      key: 1,
+      title: "Cum mă înscriu?",
+      data: (
+        <p>
+          Completează <a href="#">acest formular</a> pentru a te înscrie
+          gratuit! Locurile sunt limitate, deci grăbește-te
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+      ),
+      isOpen: false,
+    },
+    {
+      key: 2,
+      title: "Pot să particip la acest hackathon?",
+      data: (
+        <p>
+          Acest eveniment este deschis pentru toți elevii care sunt în liceu sau
+          gimnaziu, dar ne așteptăm ca majoritatea participanților sa fie din
+          liceu (dar asta nu înseamnă că nu poți veni dacă ești în gimnaziu).
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      key: 3,
+      title: "Ce nivel de experiență este potrivit?",
+      data: (
+        <p>
+          Acest eveniment este pentru toata lumea, asta înseamnă că ești
+          binevenit indiferent de nivelul tău de experiență, chiar dacă nu ai
+          văzut nicio linie de cod în viața ta, sau chiar dacă deja te antrenezi
+          intens pe partea de programare. Majoritatea participanților vor avea
+          un nivel de experiență de aproape 0, dar și cei experimentați vor avea
+          multe de învățat.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      key: 4,
+      title: "Ce este mai exact TreeBytez?",
+      data: (
+        <p>
+          TreeBytez este un hackathon(eveniment de programare) organizat de{" "}
+          <a href="#">un grup de adolescenți</a>, unde ne adunăm pentru [x] zile
+          să creăm jocuri fantastice și să învățăm alături de cunoscători in
+          domeniu.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      key: 5,
+      title: "Cine sunt organizatorii?",
+      data: (
+        <p>
+          Suntem un grup de adolescenți din Dej, Cluj, pasionați de programare.
+          Avem în spate ani de experiență si zeci de proiecte și suntem
+          nerăbdători să împărtășim aceste cunoștințe cu voi. Aici găsiți
+          site-ul nostru, unde puteți afla mai multe detalii: <a href="#">#</a>
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      key: 6,
+      title: "Unde și când va avea loc acest eveniment?",
+      data: (
+        <p>
+          În weekendul din perioada 29 mai - 1 iunie te așteptăm la{" "}
+          <a href="#">Figa, Beclean</a> pentru a descoperi lumea magică a
+          programării de jocuri video.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      key: 7,
+      title: "Cât costă să particip?",
+      data: (
+        <p>
+          0 lei, e gratis! <a href="#">Mulțumită sponsorilor</a>, vom putea
+          aproviziona mâncare, cazare și premii pentru tot evenimentul.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      key: 8,
+      title: "Ce trebuie să aduc la eveniment?",
+      data: (
+        <p>
+          Un laptop, încărcător, obiecte de igienă personala(periuță, pastă de
+          dinți, deodorant, gel de duș, prosop, etc.)
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      key: 9,
+      title: "Cum o să fim cazați?",
+      data: (
+        <p>
+          Cazarea va fi asigurată de <a href="">Căsuțele Sebastian</a>, fiecare
+          căsuță este dotată cu un pat matrimonial(într-o căsuță vor dormi doar
+          persoane de același sex), baie proprie, apă caldă.
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      key: 10,
+      title: "Părinții mei sunt îngrijorați. Ce pot să fac?",
+      data: (
+        <p>
+          Suntem deschiși pentru a primi orice întrebare la adresa de email
+          <a href="mailto:#">vectorbytez@gmail.com</a>, sau la nr de tel{" "}
+          <a href="#">+40760051313</a>. Vom avea supraveghere 24/7 pe toată
+          durata evenimentului de către voluntari, datorită asociației
+          <a href="#">Vă Ajutăm din Dej</a>
+        </p>
+      ),
+      isOpen: false,
+    },
+    {
+      key: 11,
+      title: "Am alte întrebări.",
+      data: (
+        <p>
+          Pentru orice întrebare, poți să ne trimiți un email la{" "}
+          <a href="mailto:#">vectorbytez@gmail.com</a> și vom răspunde in maxim
+          24 de ore.
+        </p>
+      ),
+      isOpen: false,
+    },
+  ]);
+
+  const [time, setTime] = useState(0);
+  const animationDuration = 8000;
+  useEffect(() => {
+    if (time > animationDuration) {
+      return;
+    }
+    let animationProgress = time / animationDuration;
+    if (animationProgress > 0.01) {
+      sealRef.current.style.opacity = 0;
+    } else {
+      sealRef.current.style.opacity = 1;
+    }
+    envelopeTriangleRef.current.style.transform = `rotateX(${
+      animationProgress * 3 * 360 > 180 ? 180 : animationProgress * 3 * 360
+    }deg)`;
+
+    envelopeTriangleRef.current.style.transformOrigin = "top";
+    var translate = (animationProgress - 0.1) * 600;
+    envelopeRef.current.style.transform = `translateY(${translate}%)`;
+
+    if (animationProgress > 0.1) {
+      envelopeTriangleRef.current.style.transform += ` translateY(${translate}%)`;
+      console.log(envelopeTriangleRef.current.style.transform);
+      if (translate > 140) {
+        if (!invitationRef.current.className.includes("invitation-open"))
+          invitationRef.current.className += " invitation-open";
+        envelopeRef.current.style.display = "none";
+        document.body.style.overflow = "unset";
+        document.body.style.paddingBottom = "800px";
+        document.getElementsByClassName("body-layer")[0]?.remove();
+        document.getElementsByClassName("triangle-layer")[0]?.remove();
+        document.getElementsByClassName("seal-layer")[0]?.remove();
+      } else {
+        invitationRef.current.className =
+          invitationRef.current.className.replace(" invitation-open", "");
+        envelopeRef.current.style.display = "flex";
+        document.body.style.overflow = "hidden";
+        document.body.style.paddingBottom = "0";
+      }
+    } else {
+      envelopeRef.current.style.transform = `translateY(0%)`;
+    }
+  }, [time]);
+
+  const toggleAccordion = (accordionkey) => {
+    const updatedAccordions = accordions.map((accord) => {
+      if (accord.key === accordionkey) {
+        return { ...accord, isOpen: !accord.isOpen };
+      } else {
+        return { ...accord, isOpen: false };
+      }
+    });
+
+    setAccordion(updatedAccordions);
+  };
+
+  const scrollListener = () => {
+    const handleWheelEvent = () => {
+      const { container, current } = parallaxRef.current;
+      const scrollpercent =
+        current / (container.current.scrollHeight - window.innerHeight);
+    };
+    window.addEventListener("wheel", handleWheelEvent);
+    return () => {
+      window.removeEventListener("wheel", handleWheelEvent);
+    };
+  };
+
+  // UseEffect to animate seal opacity
+  return (
+    <div>
+      <div className="parallax bg">
+        <div className="invitation-layer">
+          <div className="flex items-center justify-center w-[100%] h-[100%] relative">
+            <div
+              className="invitation bg-[#EEE7D7] transition-all ease-in-out duration-1000 rounded-md overflow-hidden"
+              style={{
+                transition:
+                  "max-height 3s ease-in-out, min-height 3s ease-in-out, width 0.5 ease-in-out",
+              }}
+              ref={invitationRef}
+            >
+              <div className="flex justify-center w-[100%] h-[100%] mb-10 decoration-black">
+                <h1 className="text-4xl font-bold">Te invit la TreeBytez</h1>
+              </div>
+              <div className="text-[#384a41] flex justify-center mb-10">
+                <div className=" w-[95%]">
+                  <p>
+                    Te invit să te aventurezi într-o excursie de neuitat, care
+                    va dura [x] zile, unde te vei putea bucura de natura, dar și
+                    să înveți de la 0 cum să îți creezi propriul joc, alături de
+                    alți adolescenți cu o pasiune comună pentru jocuri.
+                  </p>
+                </div>
+              </div>
+              {accordions.map((accordion) => (
+                <Accordion
+                  key={accordion.key}
+                  title={accordion.title}
+                  data={accordion.data}
+                  isOpen={accordion.isOpen}
+                  toggleAccordion={() => toggleAccordion(accordion.key)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="triangle-layer">
+          <div className="flex items-center justify-center w-[100%] h-[100%] relative">
+            <img
+              style={{ transition: "all 0.1s ease-in-out" }}
+              src="/envelope-triangle.png"
+              ref={envelopeTriangleRef}
+              className="triangle absolute"
             />
-          </a>
+          </div>
+        </div>
+        <div className="body-layer">
+          <div
+            className="flex items-center justify-center w-[100%] h-[100%] relative transition-all duration-200 ease-in-out"
+            ref={envelopeRef}
+          >
+            <img src="/envelope-body.png" alt="envelope" className="body" />
+          </div>
+        </div>
+        <div className="seal-layer">
+          <div className="flex items-center justify-center w-[100%] h-[100%] relative">
+            <button
+              onClick={() => {
+                if (time > 0) return;
+                function animate(prevTime) {
+                  setTimeout(() => {
+                    setTime(prevTime);
+                    animate(prevTime + 10);
+                  }, 10);
+                }
+                animate(time);
+              }}
+            >
+              <img
+                style={{ transition: "opacity 0.5s ease-in-out" }}
+                ref={sealRef}
+                src="/seal.png"
+                className="seal top-[52.5%] absolute"
+              />
+            </button>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
