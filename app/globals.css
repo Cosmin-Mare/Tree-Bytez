@@ -236,8 +236,8 @@ a:visited {
 @media screen and (max-width: 450px) {
   .invitation {
     width: 100%;
-    min-height: 25%;
-    max-height: 25%;
+    min-height: 30%;
+    max-height: 30%;
     transform: translateY(-10%);
   }
   .body {
