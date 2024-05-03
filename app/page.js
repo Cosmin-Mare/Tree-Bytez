@@ -145,7 +145,7 @@ export default function Home() {
           la nr de tel <a href="tel:+40760051313"> +40760051313</a>. Vom avea
           supraveghere 24/7 pe toată durata evenimentului de către voluntari,
           datorită asociației
-          <a href="https://vaajutamdindej.ro/">Vă Ajutăm din Dej</a>
+          <a href="https://vaajutamdindej.ro/"> Vă Ajutăm din Dej</a>
         </p>
       ),
       isOpen: false,
