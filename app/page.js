@@ -14,8 +14,11 @@ export default function Home() {
       title: "Cum mă înscriu?",
       data: (
         <p>
-          Completează <a href="#">acest formular</a> pentru a te înscrie
-          gratuit! Locurile sunt limitate, deci grăbește-te
+          Completează{" "}
+          <a href="https://docs.google.com/forms/d/14t1zvrzF6zfV1pE4-Tp0MFPPNhPRJS31MUunbCDOBp0/edit?pli=1">
+            acest formular
+          </a>{" "}
+          pentru a te înscrie gratuit! Locurile sunt limitate, deci grăbește-te
         </p>
       ),
       isOpen: false,
@@ -40,9 +43,9 @@ export default function Home() {
           Acest eveniment este pentru toata lumea, asta înseamnă că ești
           binevenit indiferent de nivelul tău de experiență, chiar dacă nu ai
           văzut nicio linie de cod în viața ta, sau chiar dacă deja te antrenezi
-          intens pe partea de programare. Majoritatea participanților vor avea
-          un nivel de experiență de aproape 0, dar și cei experimentați vor avea
-          multe de învățat.
+          intens pe partea de programare. Chiar daca majoritatea participanților
+          vor avea un nivel de experiență de aproape 0,ii aspteptam si pe cei
+          mai experimentati deoarece si ei vor avea ceva de invatat.
         </p>
       ),
       isOpen: false,
@@ -52,10 +55,16 @@ export default function Home() {
       title: "Ce este mai exact TreeBytez?",
       data: (
         <p>
-          TreeBytez este un hackathon(eveniment de programare) organizat de{" "}
-          <a href="#">un grup de adolescenți</a>, unde ne adunăm pentru [x] zile
-          să creăm jocuri fantastice și să învățăm alături de cunoscători in
-          domeniu.
+          TreeBytez este un{" "}
+          <a href="https://ro.wikipedia.org/wiki/Hackathon">
+            hackathon(eveniment de programare)
+          </a>{" "}
+          organizat de{" "}
+          <a href="https://www.instagram.com/vectorbytez/">
+            un grup de adolescenți
+          </a>
+          , unde ne adunăm pentru [3] zile să creăm jocuri fantastice și să
+          învățăm alături de cunoscători in domeniu.
         </p>
       ),
       isOpen: false,
@@ -67,8 +76,9 @@ export default function Home() {
         <p>
           Suntem un grup de adolescenți din Dej, Cluj, pasionați de programare.
           Avem în spate ani de experiență si zeci de proiecte și suntem
-          nerăbdători să împărtășim aceste cunoștințe cu voi. Aici găsiți
-          site-ul nostru, unde puteți afla mai multe detalii: <a href="#">#</a>
+          nerăbdători să împărtășim aceste cunoștințe cu tine. Aici găsiți
+          Instagramul nostru, unde puteți afla mai multe detalii:{" "}
+          <a href="https://www.instagram.com/vectorbytez/">vectorbytez</a>
         </p>
       ),
       isOpen: false,
@@ -78,9 +88,12 @@ export default function Home() {
       title: "Unde și când va avea loc acest eveniment?",
       data: (
         <p>
-          În weekendul din perioada 29 mai - 1 iunie te așteptăm la{" "}
-          <a href="#">Figa, Beclean</a> pentru a descoperi lumea magică a
-          programării de jocuri video.
+          În weekendul din perioada 31 mai - 2 iunie te așteptăm la{" "}
+          {"TreeBytez la "}
+          <a href="https://bailefigacazare.ro/">Figa, Beclean</a> pentru a
+          descoperi lumea magică a programării de jocuri video. Poți ajunge ori
+          în 31 mai între orele 18:00-20:00, ori în 1 iunie între orele
+          8:00-10:00.
         </p>
       ),
       isOpen: false,
@@ -90,8 +103,8 @@ export default function Home() {
       title: "Cât costă să particip?",
       data: (
         <p>
-          0 lei, e gratis! <a href="#">Mulțumită sponsorilor</a>, vom putea
-          aproviziona mâncare, cazare și premii pentru tot evenimentul.
+          0 lei, e gratis! Mulțumită <a href="#sponsori">sponsorilor</a>, vom
+          putea aproviziona mâncare, cazare și premii pentru tot evenimentul.
         </p>
       ),
       isOpen: false,
@@ -112,9 +125,12 @@ export default function Home() {
       title: "Cum o să fim cazați?",
       data: (
         <p>
-          Cazarea va fi asigurată de <a href="">Căsuțele Sebastian</a>, fiecare
-          căsuță este dotată cu un pat matrimonial(într-o căsuță vor dormi doar
-          persoane de același sex), baie proprie, apă caldă.
+          Cazarea va fi asigurată de{" "}
+          <a href="https://bailefigacazare.ro/cabanele-panoramic-si-sebastian-2/casute-sebastian/">
+            Căsuțele Sebastian
+          </a>
+          , fiecare căsuță este dotată cu un pat matrimonial(într-o căsuță vor
+          dormi doar persoane de același sex), baie proprie, apă caldă.
         </p>
       ),
       isOpen: false,
@@ -125,10 +141,11 @@ export default function Home() {
       data: (
         <p>
           Suntem deschiși pentru a primi orice întrebare la adresa de email
-          <a href="mailto:#">vectorbytez@gmail.com</a>, sau la nr de tel{" "}
-          <a href="#">+40760051313</a>. Vom avea supraveghere 24/7 pe toată
-          durata evenimentului de către voluntari, datorită asociației
-          <a href="#">Vă Ajutăm din Dej</a>
+          <a href="mailto:vectorbytez@gmail.com">vectorbytez@gmail.com</a>, sau
+          la nr de tel <a href="tel:+40760051313">+40760051313</a>. Vom avea
+          supraveghere 24/7 pe toată durata evenimentului de către voluntari,
+          datorită asociației
+          <a href="https://vaajutamdindej.ro/">Vă Ajutăm din Dej</a>
         </p>
       ),
       isOpen: false,
@@ -139,8 +156,8 @@ export default function Home() {
       data: (
         <p>
           Pentru orice întrebare, poți să ne trimiți un email la{" "}
-          <a href="mailto:#">vectorbytez@gmail.com</a> și vom răspunde in maxim
-          24 de ore.
+          <a href="mailto:vectorbytez@gmail.com">vectorbytez@gmail.com</a> și
+          vom răspunde in maxim 24 de ore.
         </p>
       ),
       isOpen: false,
@@ -236,7 +253,7 @@ export default function Home() {
                 <div className=" w-[95%]">
                   <p>
                     Te invit să te aventurezi într-o excursie de neuitat, care
-                    va dura [x] zile, unde te vei putea bucura de natura, dar și
+                    va dura 3 zile, unde te vei putea bucura de natura, dar și
                     să înveți de la 0 cum să îți creezi propriul joc, alături de
                     alți adolescenți cu o pasiune comună pentru jocuri.
                   </p>
@@ -251,6 +268,24 @@ export default function Home() {
                   toggleAccordion={() => toggleAccordion(accordion.key)}
                 />
               ))}
+              <div id="sponsori">
+                <h1 className="text-4xl font-bold text-center mt-5 mb-10">
+                  Sponsori
+                </h1>
+                <div className="flex justify-center">
+                  <div className="w-[95%]">
+                    <p>
+                      Mulțumită sponsorilor noștri, vom putea aproviziona
+                      mâncare, cazare și premii pentru tot evenimentul. Dacă
+                      dorești să ne susții, te rugăm să ne trimiți un email la{" "}
+                      <a href="mailto:vectorbytez@gmail.com">
+                        vectorbytez@gmail.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div className="flex justify-center"></div>
+              </div>
             </div>
           </div>
         </div>
