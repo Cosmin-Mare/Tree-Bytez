@@ -246,7 +246,7 @@ export default function Home() {
               }}
               ref={invitationRef}
             >
-              <div className="flex justify-center w-[100vw] h-[100vh] mb-10 decoration-black">
+              <div className="flex justify-center w-[100%] h-[100%] mb-10 decoration-black">
                 <h1 className="text-4xl font-bold">Te invit la TreeBytez</h1>
               </div>
               <div className="text-[#384a41] flex justify-center mb-10">
