@@ -237,7 +237,7 @@ export default function Home() {
     <div>
       <div className="parallax bg">
         <div className="invitation-layer">
-          <div className="flex items-center justify-center w-[100%] h-[100%] relative">
+          <div className="flex items-center justify-center w-[100vw] h-[100vh] relative">
             <div
               className="invitation bg-[#EEE7D7] transition-all ease-in-out duration-1000 rounded-md overflow-hidden"
               style={{
@@ -290,7 +290,7 @@ export default function Home() {
           </div>
         </div>
         <div className="triangle-layer">
-          <div className="flex items-center justify-center w-[100%] h-[100%] relative">
+          <div className="flex items-center justify-center w-[100vw] h-[100vh] relative">
             <img
               style={{ transition: "all 0.1s ease-in-out" }}
               src="/envelope-triangle.png"
@@ -301,7 +301,7 @@ export default function Home() {
         </div>
         <div className="body-layer">
           <div
-            className="flex items-center justify-center w-[100%] h-[100%] relative transition-all duration-200 ease-in-out"
+            className="flex items-center justify-center w-[100vw] h-[100vh] relative transition-all duration-200 ease-in-out"
             ref={envelopeRef}
           >
             <img src="/envelope-body.png" alt="envelope" className="body" />
