@@ -18,7 +18,7 @@ export default function Home() {
           <a href="https://docs.google.com/forms/d/14t1zvrzF6zfV1pE4-Tp0MFPPNhPRJS31MUunbCDOBp0/edit?pli=1">
             acest formular
           </a>{" "}
-          pentru a te înscrie gratuit! Locurile sunt limitate, deci grăbește-te
+          pentru a te înscrie gratuit! Locurile sunt limitate, deci grăbește-te.
         </p>
       ),
       isOpen: false,
@@ -29,7 +29,7 @@ export default function Home() {
       data: (
         <p>
           Acest eveniment este deschis pentru toți elevii care sunt în liceu sau
-          gimnaziu, dar ne așteptăm ca majoritatea participanților sa fie din
+          gimnaziu, dar ne așteptăm ca majoritatea participanților să fie din
           liceu (dar asta nu înseamnă că nu poți veni dacă ești în gimnaziu).
         </p>
       ),
@@ -40,12 +40,12 @@ export default function Home() {
       title: "Ce nivel de experiență este potrivit?",
       data: (
         <p>
-          Acest eveniment este pentru toata lumea, asta înseamnă că ești
+          Acest eveniment este pentru toată lumea, asta înseamnă că ești
           binevenit indiferent de nivelul tău de experiență, chiar dacă nu ai
           văzut nicio linie de cod în viața ta, sau chiar dacă deja te antrenezi
-          intens pe partea de programare. Chiar daca majoritatea participanților
-          vor avea un nivel de experiență de aproape 0,ii aspteptam si pe cei
-          mai experimentati deoarece si ei vor avea ceva de invatat.
+          intens pe partea de programare. Chiar dacă majoritatea participanților
+          vor avea un nivel de experiență de aproape 0, îi așteptăm și pe cei
+          mai experimentați deoarece și ei vor avea ceva de învățat.
         </p>
       ),
       isOpen: false,
@@ -57,14 +57,14 @@ export default function Home() {
         <p>
           TreeBytez este un{" "}
           <a href="https://ro.wikipedia.org/wiki/Hackathon">
-            hackathon(eveniment de programare)
+            hackathon (eveniment de programare)
           </a>{" "}
           organizat de{" "}
           <a href="https://www.instagram.com/vectorbytez/">
             un grup de adolescenți
           </a>
-          , unde ne adunăm pentru [3] zile să creăm jocuri fantastice și să
-          învățăm alături de cunoscători in domeniu.
+          , unde ne adunăm pentru 3 zile să creăm jocuri fantastice și să
+          învățăm alături de cunoscători în domeniu.
         </p>
       ),
       isOpen: false,
@@ -75,7 +75,7 @@ export default function Home() {
       data: (
         <p>
           Suntem un grup de adolescenți din Dej, Cluj, pasionați de programare.
-          Avem în spate ani de experiență si zeci de proiecte și suntem
+          Avem în spate ani de experiență și zeci de proiecte și suntem
           nerăbdători să împărtășim aceste cunoștințe cu tine. Aici găsiți
           Instagramul nostru, unde puteți afla mai multe detalii:{" "}
           <a href="https://www.instagram.com/vectorbytez/">vectorbytez</a>
@@ -114,8 +114,8 @@ export default function Home() {
       title: "Ce trebuie să aduc la eveniment?",
       data: (
         <p>
-          Un laptop, încărcător, obiecte de igienă personala(periuță, pastă de
-          dinți, deodorant, gel de duș, prosop, etc.)
+          Un laptop, încărcător, obiecte de igienă personală (periuță, pastă de
+          dinți, deodorant, gel de duș, prosop, etc.).
         </p>
       ),
       isOpen: false,
@@ -126,10 +126,13 @@ export default function Home() {
       data: (
         <p>
           Cazarea va fi asigurată de{" "}
-          <a href="https://bailefigacazare.ro/cabanele-panoramic-si-sebastian-2/casute-sebastian/">
+          <a
+            target="_blank"
+            href="https://bailefigacazare.ro/cabanele-panoramic-si-sebastian-2/casute-sebastian/"
+          >
             Căsuțele Sebastian
           </a>
-          , fiecare căsuță este dotată cu un pat matrimonial(într-o căsuță vor
+          , fiecare căsuță este dotată cu un pat matrimonial (într-o căsuță vor
           dormi doar persoane de același sex), baie proprie, apă caldă.
         </p>
       ),
@@ -140,12 +143,15 @@ export default function Home() {
       title: "Părinții mei sunt îngrijorați. Ce pot să fac?",
       data: (
         <p>
-          Suntem deschiși pentru a primi orice întrebare la adresa de email
+          Suntem deschiși pentru a primi orice întrebare la adresa de email{" "}
           <a href="mailto:vectorbytez@gmail.com">vectorbytez@gmail.com</a>, sau
           la nr de tel <a href="tel:+40760051313">+40760051313</a>. Vom avea
           supraveghere 24/7 pe toată durata evenimentului de către voluntari,
-          datorită asociației
-          <a href="https://vaajutamdindej.ro/">Vă Ajutăm din Dej</a>
+          datorită asociației{" "}
+          <a target="_blank" href="https://vaajutamdindej.ro/">
+            Vă Ajutăm din Dej
+          </a>
+          .
         </p>
       ),
       isOpen: false,
@@ -156,8 +162,8 @@ export default function Home() {
       data: (
         <p>
           Pentru orice întrebare, poți să ne trimiți un email la{" "}
-          <a href="mailto:vectorbytez@gmail.com">vectorbytez@gmail.com</a> și
-          vom răspunde in maxim 24 de ore.
+          <a href="mailto:vectorbytez@gmail.com">vectorbytez@gmail.com </a>
+          și vom răspunde in maxim 24 de ore.
         </p>
       ),
       isOpen: false,
