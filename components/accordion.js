@@ -23,7 +23,7 @@ export default function Accordion(props) {
           transition: "all 0.5s ease-in-out",
           overflow: "hidden",
           padding: `${props.isOpen ? "16px" : 0}`,
-          maxHeight: `${props.isOpen ? "10rem" : 0}`,
+          maxHeight: `${props.isOpen ? "20rem" : 0}`,
         }}
       >
         {props.data}
