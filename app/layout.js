@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Tree Bytez",
+  title: "TreeBytez",
   description:
     "Cel mai mare hackathon gratis, fizic, pentru liceenii din Romania",
 };
