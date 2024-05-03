@@ -63,7 +63,7 @@ export default function Home() {
           <a href="https://www.instagram.com/vectorbytez/">
             un grup de adolescenți
           </a>
-          , unde ne adunăm pentru [3] zile să creăm jocuri fantastice și să
+          , unde ne adunăm pentru 3 zile să creăm jocuri fantastice și să
           învățăm alături de cunoscători in domeniu.
         </p>
       ),
@@ -129,7 +129,7 @@ export default function Home() {
           <a href="https://bailefigacazare.ro/cabanele-panoramic-si-sebastian-2/casute-sebastian/">
             Căsuțele Sebastian
           </a>
-          , fiecare căsuță este dotată cu un pat matrimonial(într-o căsuță vor
+          , fiecare căsuță este dotată cu un pat matrimonial (într-o căsuță vor
           dormi doar persoane de același sex), baie proprie, apă caldă.
         </p>
       ),
@@ -141,8 +141,8 @@ export default function Home() {
       data: (
         <p>
           Suntem deschiși pentru a primi orice întrebare la adresa de email
-          <a href="mailto:vectorbytez@gmail.com">vectorbytez@gmail.com</a>, sau
-          la nr de tel <a href="tel:+40760051313">+40760051313</a>. Vom avea
+          <a href="mailto:vectorbytez@gmail.com"> vectorbytez@gmail.com</a>, sau
+          la nr de tel <a href="tel:+40760051313"> +40760051313</a>. Vom avea
           supraveghere 24/7 pe toată durata evenimentului de către voluntari,
           datorită asociației
           <a href="https://vaajutamdindej.ro/">Vă Ajutăm din Dej</a>
